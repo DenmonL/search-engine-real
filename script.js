@@ -52,3 +52,7 @@ function childNodesWithClass(parentElement, desiredClass) {
     }
     return hasChildNodesWithClass;
 }
+
+window.addEventListener('resize', function () {
+    window.resizeTo(screen.width, screen.height)
+})
