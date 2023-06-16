@@ -8,9 +8,9 @@ body {
     overflow-x: hidden;
 }
 
-.animation {
+/* .animation {
     animation : berjalan 5s forwards;
-}
+} */
 
 .header {
     height: 50px;

@@ -28,18 +28,38 @@ submitBtn.addEventListener("click", function () {
     let elem = document.createElement('h1');
     elem.innerHTML = "Ya Mana Saya Tau Kok Tanya Saya.... T_T";
     elem.classList.add("h3");
-    elem.classList.add("animation");
+    // elem.classList.add("animation");
+    elem.style.right = "-510px";
+    elem.style.position = "absolute";
 
     searchForm.classList.add("text-left");
     searchForm.appendChild(elem);
 
-    setTimeout(function(){
-        elem.remove();
-    }, 5000);
-    let tmo = setTimeout(function () {
-        mainForm.style.visibility = "visible";
-    }, 5000);
+
+    let limit = window.innerWidth - 400;
+    let position = -510;
+
+    let intv = setInterval(kururin, 12);
+
+
+    function kururin() {
+
+        if (position >= limit) {
+            clearInterval(intv);
+            elem.remove();
+            mainForm.style.visibility = "visible";
+        } else {
+            position += 3;
+            elem.style.right = position + "px";
+        }
+
+    }
+    // let tmo = setTimeout(function () {
+    //     mainForm.style.visibility = "visible";
+    // }, 5000);
 });
+
+
 
 function childNodesWithClass(parentElement, desiredClass) {
     var hasChildNodesWithClass = false;
