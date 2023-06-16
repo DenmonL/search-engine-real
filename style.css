@@ -1,0 +1,22 @@
+.animation {
+    animation : berjalan 5s forwards;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: #491f66;
+    margin-bottom: 0;
+}
+
+@keyframes berjalan {
+    0% {
+        transform: translateX(100%);
+    }
+    99% {
+        transform: translateX(0%);
+    }
+    100% {
+        visibility: hidden;
+    }
+}
