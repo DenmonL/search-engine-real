@@ -33,6 +33,9 @@ submitBtn.addEventListener("click", function () {
     searchForm.classList.add("text-left");
     searchForm.appendChild(elem);
 
+    setTimeout(function(){
+        elem.remove();
+    }, 5000);
     let tmo = setTimeout(function () {
         mainForm.style.visibility = "visible";
     }, 5000);
